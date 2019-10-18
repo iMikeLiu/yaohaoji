@@ -1,0 +1,101 @@
+<html>
+<body>
+<script>
+function randomFrom(lowerValue,upperValue)
+{
+	
+    var t=Math.random();
+
+console.log(t);
+return (Math.floor(t * (upperValue - lowerValue + 1) + lowerValue));
+}
+function isPrime(num){
+    if(typeof num !== "number" || !Number.isInteger(num)){　　　　　　// Number.isInterget 判断是否为整数
+        return false;
+    }
+    if(num == 2){
+        return true; 
+    }else if(num % 2 == 0){
+        return false;
+    }
+    var squareRoot = Math.sqrt(num);
+    for(var i = 3; i <= squareRoot; i += 2) {
+      if (num % i === 0) {
+         return false;
+      }
+    }
+    return true;
+}
+
+function update()
+{
+	if(mode==1)
+{
+	res.innerHTML=randomFrom(parseInt(start.value),parseInt(end.value));
+
+}
+	if(mode==2)
+	{
+		res.innerHTML=randomFrom(parseInt(start.value),parseInt(end.value));
+		while(isPrime(parseInt(res.innerHTML))==false)
+		res.innerHTML=randomFrom(parseInt(start.value),parseInt(end.value));
+	}
+	if(mode==3)
+	{
+		res.innerHTML=randomFrom(parseInt(start.value),parseInt(end.value));
+		while(parseInt(res.innerHTML)%2==0)
+		res.innerHTML=randomFrom(parseInt(start.value),parseInt(end.value));
+	}
+	if(mode==4)
+	{
+		res.innerHTML=randomFrom(parseInt(start.value),parseInt(end.value));
+		while(parseInt(res.innerHTML)%2==1)
+		res.innerHTML=randomFrom(parseInt(start.value),parseInt(end.value));
+	}
+	if(mode==5)
+	{
+		res.innerHTML=randomFrom(parseInt(start.value),parseInt(end.value));
+		while(isPrime(parseInt(res.innerHTML))==true)
+		res.innerHTML=randomFrom(parseInt(start.value),parseInt(end.value));
+	}
+}
+function check()
+{
+	if(mode==1){
+		mod.innerHTML="顺序";
+	}
+	if(mode==2){
+		mod.innerHTML="质数";
+	}
+	if(mode==3){
+		mod.innerHTML="单数";
+	}
+	if(mode==4){
+		mod.innerHTML="双数";
+	}
+}
+var mode=1;
+</script>
+<center>
+<span>初始值</span>
+<textarea id="start">1</textarea>
+<span>终止值</span>
+<textarea id="end">56</textarea>
+</center>
+<p style="font-size:50px;text-align:center">当前模式<span id="mod">顺序</span></p>
+<center>
+<button onclick="end.innerHTML=56;" style="font-size:70px;text-align:center">56人</button>
+<button onclick="end.innerHTML=4;" style="font-size:70px;text-align:center">4组</button>
+<button onclick="end.innerHTML=12;" style="font-size:70px;text-align:center">12组</button>
+</center>
+<center>
+<button onclick="mode=1;check();" style="font-size:70px;text-align:center">顺序</button>
+<button onclick="mode=2;check();" style="font-size:70px;text-align:center">质数</button>
+<button onclick="mode=3;check();" style="font-size:70px;text-align:center">单数</button>
+<button onclick="mode=4;check();" style="font-size:70px;text-align:center">双数</button>
+<button onclick="mode=5;check();" style="font-size:70px;text-align:center">合数</button>
+</center>
+<center><button onclick="update();" style="font-size:100px">摇号</button></center>
+<p style="font-size:100px;text-align:center" id="res">0</p>
+</body>
+</html>
