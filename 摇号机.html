@@ -10,7 +10,7 @@ console.log(t);
 return (Math.floor(t * (upperValue - lowerValue + 1) + lowerValue));
 }
 function isPrime(num){
-    if(typeof num !== "number" || !Number.isInteger(num)){¡¡¡¡¡¡¡¡¡¡¡¡// Number.isInterget ÅĞ¶ÏÊÇ·ñÎªÕûÊı
+    if(typeof num !== "number" || !Number.isInteger(num)){ã€€ã€€ã€€ã€€ã€€ã€€// Number.isInterget åˆ¤æ–­æ˜¯å¦ä¸ºæ•´æ•°
         return false;
     }
     if(num == 2){
@@ -62,40 +62,41 @@ function update()
 function check()
 {
 	if(mode==1){
-		mod.innerHTML="Ë³Ğò";
+		mod.innerHTML="é¡ºåº";
 	}
 	if(mode==2){
-		mod.innerHTML="ÖÊÊı";
+		mod.innerHTML="è´¨æ•°";
 	}
 	if(mode==3){
-		mod.innerHTML="µ¥Êı";
+		mod.innerHTML="å•æ•°";
 	}
 	if(mode==4){
-		mod.innerHTML="Ë«Êı";
+		mod.innerHTML="åŒæ•°";
 	}
 }
 var mode=1;
 </script>
 <center>
-<span>³õÊ¼Öµ</span>
+<span>åˆå§‹å€¼</span>
 <textarea id="start">1</textarea>
-<span>ÖÕÖ¹Öµ</span>
+<span>ç»ˆæ­¢å€¼</span>
 <textarea id="end">56</textarea>
 </center>
-<p style="font-size:50px;text-align:center">µ±Ç°Ä£Ê½<span id="mod">Ë³Ğò</span></p>
+<p style="font-size:50px;text-align:center">å½“å‰æ¨¡å¼<span id="mod">é¡ºåº</span></p>
 <center>
-<button onclick="end.innerHTML=56;" style="font-size:70px;text-align:center">56ÈË</button>
-<button onclick="end.innerHTML=4;" style="font-size:70px;text-align:center">4×é</button>
-<button onclick="end.innerHTML=12;" style="font-size:70px;text-align:center">12×é</button>
+<button onclick="end.innerHTML=56;" style="font-size:70px;text-align:center">56äºº</button>
+<button onclick="end.innerHTML=4;" style="font-size:70px;text-align:center">4ç»„</button>
+<button onclick="end.innerHTML=12;" style="font-size:70px;text-align:center">12ç»„</button>
 </center>
 <center>
-<button onclick="mode=1;check();" style="font-size:70px;text-align:center">Ë³Ğò</button>
-<button onclick="mode=2;check();" style="font-size:70px;text-align:center">ÖÊÊı</button>
-<button onclick="mode=3;check();" style="font-size:70px;text-align:center">µ¥Êı</button>
-<button onclick="mode=4;check();" style="font-size:70px;text-align:center">Ë«Êı</button>
-<button onclick="mode=5;check();" style="font-size:70px;text-align:center">ºÏÊı</button>
+<button onclick="mode=1;check();" style="font-size:70px;text-align:center">é¡ºåº</button>
+<button onclick="mode=2;check();" style="font-size:70px;text-align:center">è´¨æ•°</button>
+<button onclick="mode=3;check();" style="font-size:70px;text-align:center">å•æ•°</button>
+<button onclick="mode=4;check();" style="font-size:70px;text-align:center">åŒæ•°</button>
+<button onclick="mode=5;check();" style="font-size:70px;text-align:center">åˆæ•°</button>
 </center>
-<center><button onclick="update();" style="font-size:100px">Ò¡ºÅ</button></center>
+<center><button onclick="update();" style="font-size:100px">æ‘‡å·</button></center>
 <p style="font-size:100px;text-align:center" id="res">0</p>
 </body>
 </html>
+
